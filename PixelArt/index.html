@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Defina o tamanho do grid para criar sua PixelArt" />
+    <title>PixelArt Grid Generator</title>
+    <link rel="icon" type="image/png" href="" />
+
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+
+    <script src="https://kit.fontawesome.com/04d1788029.js" crossorigin="anonymous"></script>
+
+    <script src="./src/js/index.js" type="module" defer></script>
+</head>
+<body>
+<header></header>
+<main>
+    <section class="inputs">
+        <div class="inputs__row">
+            <label id="rowsLabel" for="rows">Linhas:</label>
+            <div class="input__container">
+                <input type="range" name="rows" id="rows" min="8" max="32" aria-labelledby="rowsLabel">
+                <span id="row"></span>
+            </div>
+        </div>
+
+        <div class="inputs__col">
+            <label id="colLabel" for="cols">Colunas:</label>
+            <div class="input__container">
+                <input type="range" name="cols" id="cols" min="8" max="32" aria-labelledby="colLabel">
+                <span id="col"></span>
+            </div>
+        </div>
+
+        <div class="inputs__cor">
+            <label id="corLabel" for="cor">Cor:</label>
+            
+            <div class="input__container">
+                <input type="color" name="cor" id="cor" aria-labelledby="corLabel">
+                <span class="input__cor__value"></span>
+            </div>
+        </div>
+
+        <div class="btn__container">
+            <div class="inputs__limpar">
+                <button class="limpar__btn">Limpar</button>
+            </div>
+
+            <div class="inputs__desenhar">
+                <button class="desenhar__btn">
+                    <i class="fa-solid fa-pencil fa-lg" title="Desenhar"></i>
+                </button>
+            </div>
+
+            <div class="inputs__apagar">
+                <button class="apagar__btn">
+                    <i class="fa-solid fa-eraser fa-lg" title="Apagar"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="grids">
+        <div class="grids__container">
+        </div>
+    </section>
+</main>
+<footer></footer>
+</body>
+</html>
