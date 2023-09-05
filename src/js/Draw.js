@@ -8,19 +8,36 @@ export default pencil;
 
 //Se clicar no botão de desenhar, desenha no grid
 drawBtn.addEventListener('click', () => {
+        draw();
+});
+
+export function draw() {
+    //let mousePressed;
     erase.apagando = false;
     pencil.desenhando = true;
 
     if(!erase.apagando)  {
-        draw();
-    }
-});
+        const grids = document.querySelectorAll(".grid");
+        grids.forEach(grid => {
+            grid.addEventListener("mousedown", (e) => {
+                //mousePressed = true
 
-export function draw() {
-    const grids = document.querySelectorAll(".grid");
-    grids.forEach(grid => {
-        grid.addEventListener('mousedown', (e) => {
-            e.target.style.background = colorInput.value;
+                //let gridID = document.elementFromPoint(e.clientX, e.clientY).id;
+                //console.log(gridID)
+
+                //while(mousePressed && gridID == grid.ID) {
+                    e.target.style.background = colorInput.value;
+                //}
+            });
+
+            /*
+            grid.addEventListener("mouseup", (e) => {
+                //mousePressed = false
+
+                grid.removeEventListener("mousedown", draw);
+            });
+            */
         });
-    });    
+    }
 }
+

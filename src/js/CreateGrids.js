@@ -23,6 +23,5 @@ export function createGrid() {
             div.classList.add("grid");
         }
     }
-
     draw();
 }

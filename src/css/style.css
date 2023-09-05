@@ -115,10 +115,11 @@ main {
     border-radius: 25px;
     background: var(--bg-btn);
     font-weight: bold;
+    transition: 1s all;
 }
 
 .limpar__btn:hover, .apagar__btn:hover, .desenhar__btn:hover {
-    background: var(--bg-btn-hover)
+    background: var(--bg-btn-hover);
 }
 
 
